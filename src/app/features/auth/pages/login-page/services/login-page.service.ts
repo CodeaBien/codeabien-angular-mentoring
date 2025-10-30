@@ -23,7 +23,7 @@ export class LoginPageService {
       .pipe(
         tap(({ token }) => {
           this.authStore.login(token);
-          this.router.navigate(['/']);
+          this.router.navigate(['/dashboard']);
         }),
         catchError((err) => {
           console.error('Login failed', err);
