@@ -24,16 +24,50 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "recommended": false,
+      "correctness": {
+        "noUnusedVariables": "warn",
+        "noUnusedImports": "warn",
+        "noUnreachable": "warn",
+        "noUndeclaredVariables": "warn",
+        "noUnusedPrivateClassMembers": "warn",
+        "useExhaustiveDependencies": "warn",
+        "useHookAtTopLevel": "warn"
+      },
       "style": {
         "noParameterAssign": "warn",
-        "useImportType": "off"
+        "useImportType": "off",
+        "useConst": "warn",
+        "useTemplate": "warn",
+        "noNonNullAssertion": "warn",
+        "noInferrableTypes": "off",
+        "useBlockStatements": "warn",
+        "useSingleVarDeclarator": "warn"
       },
       "complexity": {
-        "noExcessiveCognitiveComplexity": "warn"
+        "noExcessiveCognitiveComplexity": "warn",
+        "noBannedTypes": "warn",
+        "noUselessConstructor": "warn",
+        "noUselessEmptyExport": "warn",
+        "noUselessLabel": "warn",
+        "noUselessLoneBlockStatements": "warn"
       },
       "suspicious": {
-        "noExplicitAny": "warn"
+        "noExplicitAny": "warn",
+        "noDoubleEquals": "warn",
+        "noDebugger": "warn",
+        "noConsole": "warn",
+        "noGlobalIsNan": "warn",
+        "noConfusingVoidType": "warn",
+        "noEmptyBlockStatements": "warn",
+        "noRedundantUseStrict": "warn"
+      },
+      "performance": {
+        "noAccumulatingSpread": "warn",
+        "noDelete": "warn"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "warn"
       }
     }
   },
