@@ -1,11 +1,13 @@
 <div class="login-page">
-  <h1 class="login-page__title">Welcome Back</h1>
-  <p class="login-page__subtitle">Please enter your credentials to log in.</p>
+	<h1 class="login-page__title">Welcome Back</h1>
+	<p class="login-page__subtitle">Please enter your credentials to log in.</p>
 
-  <app-login-form
-    [isLoading]="pageService.isLoading()"
-    [error]="pageService.error()"
-    (login)="onLogin($event)"
-    class="login-page__form"
-  ></app-login-form>
+	<app-login-form
+		[isLoading]="pageService.isLoading()"
+		[error]="pageService.error()"
+		(login)="onLogin($event)"
+		class="login-page__form"
+	></app-login-form>
+
+	<label>Register</label>
 </div>
