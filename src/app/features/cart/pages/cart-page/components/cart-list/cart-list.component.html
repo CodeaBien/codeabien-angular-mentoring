@@ -1,54 +1,42 @@
 <div class="cart-list">
-  <div class="items-container">
-    @for (item of items(); track item.productId) {
-      <div class="cart-item">
-        <img
-          [ngSrc]="item.image"
-          [alt]="item.title"
-          width="100"
-          height="100"
-          class="item-image"
-        />
+	<div class="items-container">
+		@for (item of items(); track item.productId) {
+			<div class="cart-item">
+				<img [ngSrc]="item.image" [alt]="item.title" width="100" height="100" class="item-image" />
 
-        <div class="item-details">
-          <h3 class="item-title">{{ item.title }}</h3>
-          <p class="item-price">${{ item.price | number : '1.2-2' }}</p>
-        </div>
+				<div class="item-details">
+					<h3 class="item-title">{{ item.title }}</h3>
+					<p class="item-price">${{ item.price | number: '1.2-2' }}</p>
+				</div>
 
-        <div class="item-quantity">
-          <label for="quantity-{{ item.productId }}">Cantidad:</label>
-          <input
-            type="number"
-            [id]="'quantity-' + item.productId"
-            [value]="item.quantity"
-            min="0"
-            (change)="onQuantityChange(item.productId, $event)"
-            class="quantity-input"
-          />
-        </div>
+				<div class="item-quantity">
+					<label for="quantity-{{ item.productId }}">Cantidad:</label>
+					<input
+						type="number"
+						[id]="'quantity-' + item.productId"
+						[value]="item.quantity"
+						min="0"
+						(change)="onQuantityChange(item.productId, $event)"
+						class="quantity-input"
+					/>
+				</div>
 
-        <div class="item-subtotal">
-          <p class="subtotal-label">Subtotal:</p>
-          <p class="subtotal-value">${{ item.subtotal | number : '1.2-2' }}</p>
-        </div>
+				<div class="item-subtotal">
+					<p class="subtotal-label">Subtotal:</p>
+					<p class="subtotal-value">${{ item.subtotal | number: '1.2-2' }}</p>
+				</div>
 
-        <button
-          type="button"
-          (click)="onRemove(item.productId)"
-          class="remove-button"
-          aria-label="Eliminar producto"
-        >
-          Eliminar
-        </button>
-      </div>
-    }
-  </div>
+				<button type="button" (click)="onRemove(item.productId)" class="remove-button" aria-label="Eliminar producto">
+					Eliminar
+				</button>
+			</div>
+		}
+	</div>
 
-  <div class="cart-summary">
-    <div class="total-section">
-      <h2>Total:</h2>
-      <p class="total-amount">${{ total() | number : '1.2-2' }}</p>
-    </div>
-  </div>
+	<div class="cart-summary">
+		<div class="total-section">
+			<h2>Total:</h2>
+			<p class="total-amount">${{ total() | number: '1.2-2' }}</p>
+		</div>
+	</div>
 </div>
-

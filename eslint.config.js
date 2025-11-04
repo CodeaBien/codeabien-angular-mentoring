@@ -31,6 +31,7 @@ module.exports = tseslint.config(
 				},
 			],
 			'@angular-eslint/prefer-inject': 'warn',
+			'@typescript-eslint/no-inferrable-types': 'warn',
 		},
 	},
 	{

@@ -18,20 +18,20 @@ export class LoginPageService {
 		this.isLoading.set(true);
 		this.error.set(null);
 
-    this.authService
-      .login(payload)
-      .pipe(
-        tap(({ token }) => {
-          this.authStore.login(token);
-          this.router.navigate(['/dashboard']);
-        }),
-        catchError((err) => {
-          console.error('Login failed', err);
-          this.error.set('Invalid credentials. Please try again.');
-          return throwError(() => err);
-        }),
-        finalize(() => this.isLoading.set(false)),
-      )
-      .subscribe();
-  }
+		this.authService
+			.login(payload)
+			.pipe(
+				tap(({ token }) => {
+					this.authStore.login(token);
+					this.router.navigate(['/dashboard']);
+				}),
+				catchError((err) => {
+					console.error('Login failed', err);
+					this.error.set('Invalid credentials. Please try again.');
+					return throwError(() => err);
+				}),
+				finalize(() => this.isLoading.set(false))
+			)
+			.subscribe();
+	}
 }

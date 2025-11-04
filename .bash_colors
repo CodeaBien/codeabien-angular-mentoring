@@ -1,0 +1,21 @@
+# Configuración de colores para Git Bash
+# Para usar: source .bash_colors
+
+# Habilitar colores en la terminal
+export FORCE_COLOR=1
+export COLORTERM=truecolor
+
+# Configuración de colores para Node/NPM
+export NPM_CONFIG_COLOR="always"
+
+# Habilitar soporte de 256 colores
+export TERM=xterm-256color
+
+# Colores personalizados para Git
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM="auto"
+
+echo "✅ Colores habilitados para terminal Git Bash"
+

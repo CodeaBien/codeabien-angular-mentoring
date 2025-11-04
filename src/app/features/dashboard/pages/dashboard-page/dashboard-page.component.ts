@@ -4,14 +4,14 @@ import { ProductService } from './services/product.service';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @Component({
-  selector: 'app-dashboard-page',
-  imports: [AsyncPipe, ProductCardComponent],
-  templateUrl: './dashboard-page.component.html',
-  styleUrl: './dashboard-page.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+	selector: 'app-dashboard-page',
+	imports: [AsyncPipe, ProductCardComponent],
+	templateUrl: './dashboard-page.component.html',
+	styleUrl: './dashboard-page.component.scss',
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardPageComponent {
-  private readonly productService = inject(ProductService);
+	private readonly productService = inject(ProductService);
 
-  products$ = this.productService.getProducts();
+	products$ = this.productService.getProducts();
 }

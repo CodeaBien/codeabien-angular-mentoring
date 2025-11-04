@@ -18,7 +18,7 @@ export class LoginFormComponent {
 	form = new FormBuilder().group({
 		username: ['mor_2314', [Validators.required]],
 		password: ['83r5^_', [Validators.required, Validators.minLength(6)]],
-	}); 
+	});
 
 	onSubmit(): void {
 		if (this.form.valid) {

@@ -5,14 +5,13 @@ import { environment } from 'src/environments/environment';
 import { ProductResponse } from '../models/product-api.model';
 
 @Injectable({
-  providedIn: 'root',
+	providedIn: 'root',
 })
 export class ProductApiService {
-  private readonly http = inject(HttpClient);
-  private readonly baseUrl = environment.apiUrl;
+	private readonly http = inject(HttpClient);
+	private readonly baseUrl = environment.apiUrl;
 
-  getProducts(): Observable<ProductResponse[]> {
-    return this.http.get<ProductResponse[]>(`${this.baseUrl}/products`);
-  }
+	getProducts(): Observable<ProductResponse[]> {
+		return this.http.get<ProductResponse[]>(`${this.baseUrl}/products`);
+	}
 }
-
