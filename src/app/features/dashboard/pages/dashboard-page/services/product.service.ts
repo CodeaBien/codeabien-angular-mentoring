@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
-import { map, type Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { ProductApiService } from '../../../domain/services/product-api.service';
-import type { ProductVm } from '../models/product.vm';
+import { ProductVm } from '../models/product.vm';
 
 @Injectable({
 	providedIn: 'root',

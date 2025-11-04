@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, inject, type OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, OnInit } from '@angular/core';
 import { CartStore } from '../../domain/store/cart.store';
 import { CartListComponent } from './components/cart-list/cart-list.component';
-import type { CartPageVm } from './models/cart-page.vm';
+import { CartPageVm } from './models/cart-page.vm';
 import { CartPageService } from './services/cart-page.service';
 
 @Component({
