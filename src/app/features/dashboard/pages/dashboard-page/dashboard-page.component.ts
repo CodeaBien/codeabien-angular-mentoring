@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
-import { ProductService } from './services/product.service';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductService } from './services/product.service';
 
 @Component({
 	selector: 'app-dashboard-page',

@@ -1,7 +1,7 @@
-import { inject, Injectable, signal } from '@angular/core';
+import { Injectable, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, finalize, tap, throwError } from 'rxjs';
-import { LoginRequest } from '../../../domain/models/auth-api.model';
+import type { LoginRequest } from '../../../domain/models/auth-api.model';
 import { AuthApiService } from '../../../domain/services/auth-api.service';
 import { AuthStore } from '../../../domain/store/auth.store';
 

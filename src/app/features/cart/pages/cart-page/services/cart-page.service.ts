@@ -1,11 +1,11 @@
-import { inject, Injectable } from '@angular/core';
-import { map, Observable, of, switchMap } from 'rxjs';
-import { CartApiService } from '../../../domain/services/cart-api.service';
-import { Cart, CartItem } from '../../../domain/models/cart.model';
-import { CartApiResponse } from '../../../domain/models/cart-api.model';
-import { CartStore } from '../../../domain/store/cart.store';
+import { Injectable, inject } from '@angular/core';
+import { map, type Observable, of, switchMap } from 'rxjs';
+import type { ProductResponse } from '../../../../dashboard/domain/models/product-api.model';
 import { ProductApiService } from '../../../../dashboard/domain/services/product-api.service';
-import { ProductResponse } from '../../../../dashboard/domain/models/product-api.model';
+import type { Cart, CartItem } from '../../../domain/models/cart.model';
+import type { CartApiResponse } from '../../../domain/models/cart-api.model';
+import { CartApiService } from '../../../domain/services/cart-api.service';
+import { CartStore } from '../../../domain/store/cart.store';
 
 @Injectable({
 	providedIn: 'root',

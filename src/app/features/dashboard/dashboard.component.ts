@@ -1,6 +1,6 @@
-import { AuthStore } from '@/features/auth/domain/store/auth.store';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Router } from '@angular/router';
+import type { Router } from '@angular/router';
+import type { AuthStore } from '@/features/auth/domain/store/auth.store';
 
 @Component({
 	selector: 'app-dashboard',

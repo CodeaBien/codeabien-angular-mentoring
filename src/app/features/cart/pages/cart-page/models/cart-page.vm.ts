@@ -1,4 +1,4 @@
-import { Cart } from '../../../domain/models/cart.model';
+import type { Cart } from '../../../domain/models/cart.model';
 
 export interface CartPageVm {
 	cart: Cart | null;

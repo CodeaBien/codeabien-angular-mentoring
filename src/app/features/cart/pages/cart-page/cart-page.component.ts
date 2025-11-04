@@ -1,9 +1,9 @@
-import { ChangeDetectionStrategy, Component, computed, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, computed, inject, type OnInit } from '@angular/core';
 import { CartStore } from '../../domain/store/cart.store';
-import { CartPageService } from './services/cart-page.service';
 import { CartListComponent } from './components/cart-list/cart-list.component';
-import { CartPageVm } from './models/cart-page.vm';
+import type { CartPageVm } from './models/cart-page.vm';
+import { CartPageService } from './services/cart-page.service';
 
 @Component({
 	selector: 'app-cart-page',
@@ -23,7 +23,7 @@ export class CartPageComponent implements OnInit {
 		loading: this.cartStore.loading(),
 		itemCount: this.cartStore.itemCount(),
 		total: this.cartStore.total(),
-		isEmpty: !this.cartStore.cart() || this.cartStore.cart()!.items.length === 0,
+		isEmpty: !this.cartStore.cart() || this.cartStore.cart()?.items.length === 0,
 	}));
 
 	ngOnInit(): void {

@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component, effect, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, effect, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { CartStore } from '@/features/cart/domain/store/cart.store';
 import { AuthStore } from '@/features/auth/domain/store/auth.store';
+import { CartStore } from '@/features/cart/domain/store/cart.store';
 import { CartPageService } from '@/features/cart/pages/cart-page/services/cart-page.service';
 
 @Component({

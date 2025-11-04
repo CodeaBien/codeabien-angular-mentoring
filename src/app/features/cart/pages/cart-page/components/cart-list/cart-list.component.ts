@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component, input, output, DestroyRef, OnInit } from '@angular/core';
 import { DecimalPipe, NgOptimizedImage } from '@angular/common';
-import { CartItem } from '../../../../domain/models/cart.model';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import type { CartItem } from '../../../../domain/models/cart.model';
 
 @Component({
 	selector: 'app-cart-list',
@@ -27,7 +27,7 @@ export class CartListComponent {
 	onQuantityChange(productId: number, event: Event): void {
 		const input = event.target as HTMLInputElement;
 		const quantity = parseInt(input.value, 10);
-		if (!isNaN(quantity) && quantity >= 0) {
+		if (!Number.isNaN(quantity) && quantity >= 0) {
 			this.updateQuantity.emit({ productId, quantity });
 		}
 	}
