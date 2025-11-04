@@ -23,7 +23,7 @@ import { AuthStore } from '@/features/auth/domain/store/auth.store';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardComponent {
-	// Componente del dashboard
+	// Dashboard component
 	constructor(
 		private authStore: AuthStore,
 		private router: Router
