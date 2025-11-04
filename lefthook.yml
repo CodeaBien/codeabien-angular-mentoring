@@ -5,6 +5,6 @@ pre-commit:
   parallel: true
   commands:
     biome:
-      glob: "*.{ts,js,json}"
+      glob: "**/*.{ts,js,json}"
       run: npx @biomejs/biome check --write --staged --no-errors-on-unmatched
       stage_fixed: true
