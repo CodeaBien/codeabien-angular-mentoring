@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import type { Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import type { CartApiResponse, CreateCartRequest } from '../models/cart-api.model';
+import { CartApiResponse, CreateCartRequest } from '../models/cart-api.model';
 
 @Injectable({
 	providedIn: 'root',

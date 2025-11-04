@@ -27,7 +27,7 @@
       "recommended": true,
       "style": {
         "noParameterAssign": "warn",
-		"useImportType": "off"
+        "useImportType": "off"
       },
       "complexity": {
         "noExcessiveCognitiveComplexity": "warn"

@@ -1,6 +1,6 @@
 import { DecimalPipe, NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import type { CartItem } from '../../../../domain/models/cart.model';
+import { CartItem } from '../../../../domain/models/cart.model';
 
 @Component({
 	selector: 'app-cart-list',

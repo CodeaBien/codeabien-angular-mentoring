@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import type { LoginRequest } from '@/features/auth/domain/models/auth-api.model';
+import { LoginRequest } from '@/features/auth/domain/models/auth-api.model';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { LoginPageService } from './services/login-page.service';
 

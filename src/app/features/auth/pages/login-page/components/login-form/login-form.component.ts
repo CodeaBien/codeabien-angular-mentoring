@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, input, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import type { LoginRequest } from '@/features/auth/domain/models/auth-api.model';
+import { LoginRequest } from '@/features/auth/domain/models/auth-api.model';
 
 @Component({
 	selector: 'app-login-form',

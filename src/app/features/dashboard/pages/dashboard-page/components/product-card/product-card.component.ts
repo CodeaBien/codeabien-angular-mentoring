@@ -1,7 +1,7 @@
 import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, input, signal } from '@angular/core';
 import { CartPageService } from '@/features/cart/pages/cart-page/services/cart-page.service';
-import type { ProductVm } from '../../models/product.vm';
+import { ProductVm } from '../../models/product.vm';
 
 @Component({
 	selector: 'app-product-card',
