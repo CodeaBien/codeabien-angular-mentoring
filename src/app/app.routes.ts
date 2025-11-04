@@ -13,6 +13,11 @@ export const APP_ROUTES: Routes = [
       import('./features/dashboard/pages/dashboard-page/dashboard-page.component').then((m) => m.DashboardPageComponent),
   },
   {
+    path: 'cart',
+    canActivate: [authGuard],
+    loadChildren: () => import('./features/cart/cart.routes').then((m) => m.CART_ROUTES),
+  },
+  {
     path: '',
     redirectTo: 'auth',
     pathMatch: 'full',

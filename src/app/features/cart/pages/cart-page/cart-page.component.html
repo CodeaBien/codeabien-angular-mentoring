@@ -1,0 +1,27 @@
+<div class="cart-page">
+  <div class="cart-header">
+    <h1>Carrito de Compras</h1>
+    <p class="item-count" *ngIf="vm().itemCount > 0">
+      {{ vm().itemCount }} {{ vm().itemCount === 1 ? 'producto' : 'productos' }}
+    </p>
+  </div>
+
+  @if (vm().loading) {
+    <div class="loading">
+      <p>Cargando carrito...</p>
+    </div>
+  } @else if (vm().isEmpty) {
+    <div class="empty-cart">
+      <p>Tu carrito está vacío</p>
+      <p class="hint">Agrega productos desde el dashboard para comenzar</p>
+    </div>
+  } @else {
+    <app-cart-list
+      [items]="vm().cart!.items"
+      [total]="vm().total"
+      (updateQuantity)="updateQuantity($event.productId, $event.quantity)"
+      (removeProduct)="removeProduct($event)"
+    />
+  }
+</div>
+
