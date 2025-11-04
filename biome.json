@@ -26,7 +26,7 @@
     "rules": {
       "recommended": false,
       "correctness": {
-        "noUnusedVariables": "warn",
+        "noUnusedVariables": "info",
         "noUnusedImports": "warn",
         "noUnreachable": "warn",
         "noUndeclaredVariables": "warn",
