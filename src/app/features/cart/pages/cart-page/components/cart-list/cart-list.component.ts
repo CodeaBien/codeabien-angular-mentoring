@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, output, DestroyRef } from '@angular/core';
 import { DecimalPipe, NgOptimizedImage } from '@angular/common';
 import { CartItem } from '../../../../domain/models/cart.model';
 
