@@ -11,7 +11,7 @@
     "lint": "biome lint ./src",
     "check": "biome check --write ./src",
     "biome:ci": "biome ci ./src",
-    "prepare": "husky"
+    "prepare": "lefthook install"
   },
   "private": true,
   "dependencies": {
@@ -36,6 +36,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "lefthook": "^2.0.2",
     "typescript": "~5.9.2"
   }
 }
