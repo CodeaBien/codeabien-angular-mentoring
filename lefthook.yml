@@ -3,8 +3,11 @@
 
 pre-commit:
   parallel: true
-  commands:
-    biome:
-      glob: "**/*.{ts,js,json}"
-      run: npx @biomejs/biome check --write --staged --no-errors-on-unmatched
-      stage_fixed: true
+  jobs:
+  - run: npx @biomejs/biome format --write --fix {staged_files}
+    glob: "**/*.{ts,js,json}"
+    stage_fixed: true
+
+  - run: npx @biomejs/biome lint --fix {staged_files}
+    glob: "**/*.{ts,json}"
+    stage_fixed: true

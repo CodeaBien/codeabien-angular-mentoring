@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "format": "biome format --write ./src",
-    "lint": "biome lint ./src",
+    "format": "npm biome format --write --fix {staged_files}",
+    "lint": "npm biome lint --fix {staged_files}",
     "check": "biome check --write ./src",
     "biome:ci": "biome ci ./src",
     "prepare": "lefthook install"
