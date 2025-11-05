@@ -1,9 +1,9 @@
-import { AuthStore } from '@/features/auth/domain/store/auth.store';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
+import { Router } from "@angular/router";
+import { AuthStore } from "@/features/auth/domain/store/auth.store";
+import { LoginRequest } from "../auth/domain/models/auth-api.model";
 @Component({
-	selector: 'app-dashboard',
+	selector: "app-dashboard",
 	standalone: true,
 	template: `
 		<div class="dashboard">
@@ -23,13 +23,16 @@ import { Router } from '@angular/router';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardComponent {
-	constructor(
-		private authStore: AuthStore,
-		private router: Router
-	) {}
+	private readonly authStore = inject(AuthStore);
+	private readonly router = inject(Router);
 
+	demo: LoginRequest = {
+		username: "mor_2314",
+		password: "83r5^_",
+	};
+	// test
 	logout(): void {
 		this.authStore.logout();
-		this.router.navigate(['/auth/login']);
+		this.router.navigate(["/auth/login"]);
 	}
 }
