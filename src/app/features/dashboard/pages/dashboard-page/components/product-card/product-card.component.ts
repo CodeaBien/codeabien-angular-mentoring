@@ -1,6 +1,6 @@
+import { CartPageService } from '@/features/cart/pages/cart-page/services/cart-page.service';
 import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, input, signal } from '@angular/core';
-import { CartPageService } from '@/features/cart/pages/cart-page/services/cart-page.service';
 import { ProductVm } from '../../models/product.vm';
 
 @Component({
@@ -18,8 +18,11 @@ export class ProductCardComponent {
 	readonly isAddingToCart = this._isAddingToCart.asReadonly();
 
 	addToCart(): void {
+		if (this._isAddingToCart()) {
+			return;
+		}
+
 		const product = this.product();
-		if (this._isAddingToCart()) return;
 
 		this._isAddingToCart.set(true);
 

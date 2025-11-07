@@ -10,7 +10,7 @@ import { ProductService } from './services/product.service';
 	styleUrl: './dashboard-page.component.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DashboardPageComponent {
+export default class DashboardPageComponent {
 	// demo
 	private readonly productService = inject(ProductService);
 

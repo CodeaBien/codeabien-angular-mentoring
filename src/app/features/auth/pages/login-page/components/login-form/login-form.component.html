@@ -9,11 +9,16 @@
 		<input id="password" formControlName="password" type="password" />
 	</div>
 
+  <form formGroupName="newGroup">
+    <label for="message">Message</label>
+    <input id="message" formControlName="message" type="text" />
+  </form>
+
 	@if (error()) {
 		<div class="error-message">{{ error() }}</div>
 	}
 
-	<button type="submit" [disabled]="form.invalid || isLoading()">
+	<button type="submit" >
 		@if (isLoading()) {
 			<span>Loading...</span>
 		} @else {

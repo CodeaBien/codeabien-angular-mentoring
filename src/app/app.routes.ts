@@ -9,10 +9,7 @@ export const APP_ROUTES: Routes = [
 	{
 		path: 'dashboard',
 		canActivate: [authGuard],
-		loadComponent: () =>
-			import('./features/dashboard/pages/dashboard-page/dashboard-page.component').then(
-				(m) => m.DashboardPageComponent
-			),
+		loadComponent: () => import('./features/dashboard/pages/dashboard-page/dashboard-page.component'),
 	},
 	{
 		path: 'cart',
