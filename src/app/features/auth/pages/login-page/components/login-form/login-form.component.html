@@ -9,15 +9,25 @@
 		<input id="password" formControlName="password" type="password" />
 	</div>
 
+	<app-demo-input formControlName="namedemo" />
+
 	@if (error()) {
 		<div class="error-message">{{ error() }}</div>
 	}
 
-	<button type="submit" [disabled]="form.invalid || isLoading()">
+	<button type="submit">
 		@if (isLoading()) {
 			<span>Loading...</span>
 		} @else {
 			<span>Login</span>
 		}
 	</button>
+
+	<form formGroupName="rememberMe">
+		<input type="checkbox" />
+		<label for="remember">Remember me</label>
+		<input type="checkbox" formControlName="checkbox" />
+
+		<input type="datetime" name="" id="" formControlName="datetime" />
+	</form>
 </form>

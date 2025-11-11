@@ -56,10 +56,10 @@
         "noExplicitAny": "warn",
         "noDoubleEquals": "warn",
         "noDebugger": "warn",
-        "noConsole": "warn",
+        "noConsole": "off",
         "noGlobalIsNan": "warn",
         "noConfusingVoidType": "warn",
-        "noEmptyBlockStatements": "warn",
+        "noEmptyBlockStatements": "off",
         "noRedundantUseStrict": "warn"
       },
       "performance": {
